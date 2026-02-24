@@ -1,16 +1,16 @@
 [
   {
     "kernelSource": {
-      "device": "b1c1",
-      "vendor": "google",
-      "name": "ksun-susfs-159",
-      "defconfig": "b1c1_defconfig",
-      "extraConfig": "vendor/kernelsu.config",
-      "repo": "https://github.com/DR-KernelArchive/kernel_google_b1c1",
-      "branch": "vic-testing"
+      "device": "sweet",
+      "vendor": "xiaomi",
+      "name": "sweetie-star",
+      "defconfig": "sweet_defconfig",
+      "extraConfig": "",
+      "repo": "https://github.com/DR-KernelArchive/sweetie_star_kernel_xiaomi_sweet",
+      "branch": "susfs"
     },
-    "output_image": "Image.lz4-dtb",
-    "use_python2": true,
+    "output_image": "Image",
+    "use_python2": false,
     "additional_script_link": "disabled",
     "additional_post_script_link": "disabled",
     "kp": {
@@ -19,26 +19,26 @@
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/KernelSU-Next/refs/heads/next/kernel/setup.sh",
-      "setupArg": "next",
-      "setupName": "KernelSU-Next",
+      "setupLink": "https://github.com/DR-KernelArchive/KernelSU-Unified/raw/susfs/kernel/setup.sh",
+      "setupArg": "susfs",
+      "setupName": "KernelSU",
       "needPatch": false,
       "susfsLink": ""
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/DR-KernelArchive/clang/r547379.git",
-        "branch": "master",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r563880.git",
+        "branch": "main",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
     ],
-    "ccache": false,
+    "ccache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
       "KCFLAGS": "-O3",
-      "build_out": "",
+      "build_out": "Image",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
         "KBUILD_BUILD_USER": "rainyxeon",
@@ -59,15 +59,9 @@
         "LLVM_DIS": "clang-AOSP/bin/llvm-dis"
       }
     },
-    "image": {
-      "use": false,
-      "imageUrl": ""
-    },
     "AnyKernel3": {
-      "use": true,
-      "release": true,
       "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
-      "branch": "b1c1"
+      "branch": "sweet"
     }
   }
 ]

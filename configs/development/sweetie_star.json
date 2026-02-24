@@ -60,14 +60,8 @@
       }
     },
     "AnyKernel3": {
-      "use": true,
-      "release": true,
       "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "sweet"
-    },
-    "image": {
-      "use": false,
-      "imageUrl": ""
     }
   }
 ]
