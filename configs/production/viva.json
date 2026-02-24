@@ -7,7 +7,7 @@
       "defconfig": "viva_defconfig",
       "extraConfig": "",
       "repo": "https://github.com/DPR-KernelArchive/kernel_xiaomi_viva",
-      "branch": "susfs"
+      "branch": "lineage-23.0"
     },
     "output_image": "Image",
     "use_python2": false,
